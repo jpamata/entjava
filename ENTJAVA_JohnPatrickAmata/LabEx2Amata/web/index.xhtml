@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+   <title>Index Page</title>
+</h:head>
+<h:body>
+   John Patrick Amata
+   <h:form>
+
+      <p>
+         1. Make a form to gather an employee name, employee ID, and the name of a health plan to sign up for.
+         If all three values are present (i.e., are something other than empty strings),
+         display a confirmation page that says “You are registered for the health plan” and that shows the name,
+         ID, and health plan. If any of the inputs are missing, display a page that
+         says “Missing Input Data”.
+
+         2. Prefill some of the textfields as follows. Make “Joe User” the default employee name,
+         “a1234” the default employee ID, and “CareFirst PPO” the default health care provider.
+      </p><br/>
+      <h:commandButton value="Form # 1" action="form1"/>
+      <p>
+         3. Make a new form that works similarly to the old one. This time however, verify that the
+         health plan entered is really one of the available health plans. Give an error message (e.g.,
+         “CMS Prime is not an available health plan”) for unknown health plans. In the
+         confirmation page, also show the monthly premium and contact phone number for that
+         health plan (in addition to the data shown earlier). This requirement means that you need
+         some simple business logic to map a health plan name to a HealthPlan object. Your
+         instructor may opt to give you a sample code to demonstrate this.
+      </p>
+      <br/>
+      <h:commandButton value="Form # 2" action="form2"/>
+      <br/>
+      <p>
+         4. Make yet another form, with behavior almost identical to the previous problem.
+         However, instead of using a textfield for the health care provider, provide a drop down
+         menu that shows a list of the available options.
+      </p>
+      <h:commandButton value="Form # 3" action="form3"/>
+   </h:form>
+</h:body>
+</html>
