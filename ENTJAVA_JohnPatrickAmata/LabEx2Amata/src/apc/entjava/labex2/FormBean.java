@@ -11,6 +11,7 @@ import java.util.List;
 /**
  * Created by John on 10/13/2016.
  */
+
 @ManagedBean
 
 public class FormBean {
@@ -75,24 +76,28 @@ public class FormBean {
     //For Forms 2 and 3
     private static HealthPlanLookUp lookupService = new HealthPlanHash();
 
-    public String showhealthPlans() {
-        healthPlan = lookupService.findHealthPlan(hPlan);
+    public String showhealthPlans(){
+    healthPlan = lookupService.findHealthPlan(hPlan);
         if (isMissing(eName)) {
             return ("missing");
-        } else if (isMissing(eID)) {
+        }
+        else if (isMissing(eID)) {
             return ("missing");
-        } else if (isMissing(hPlan)) {
+        }
+        else if (isMissing(hPlan)) {
             return ("missing");
-        } else {
+        }
+        else {
             if (healthPlan == null) { //c
                 return ("noplanerror");
+            } else if (hPlan == "example1") {
+                return ("confirmationNew");
             } else {
                 return ("confirmationNew");
             }
         }
+
     }
-
-
     private HealthPlan healthPlan;
     public HealthPlan getHealthPlan(){
         return this.healthPlan;
